@@ -14,6 +14,11 @@ public class GestorPalabrasTest {
         assertEquals(true, prueba.esPalindromo("allí, ves sevilla"));
     }
 
+      @Test
+    public void testContarVocales(){
+        GestorPalabras prueba1 = new GestorPalabras();
+        assertEquals(4, prueba1.contarVocales("piruletat"));
+    }
 
     
     @Test
