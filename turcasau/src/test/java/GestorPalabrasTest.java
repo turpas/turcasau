@@ -13,5 +13,13 @@ public class GestorPalabrasTest {
         GestorPalabras prueba = new GestorPalabras();
         assertEquals(true, prueba.esPalindromo("allí, ves sevilla"));
     }
+
+
+    
+    @Test
+    public void testInvertirPalabras(){
+        GestorPalabras prueba2 = new GestorPalabras();
+        assertEquals("pal ó", prueba2.invertirPalabra("ó lap"));
+    }
 }
 
