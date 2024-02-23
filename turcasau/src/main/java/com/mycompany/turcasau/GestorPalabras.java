@@ -9,8 +9,15 @@ package com.mycompany.turcasau;
  * @author Sergio Turpin
  */
 public class GestorPalabras {
-    public boolean esPalindromo(String palabra) {
-        String palabraFormateada = palabra.replaceAll("\\s+", "").toLowerCase();
+    public boolean esPalindromo(String palabra){
+        String palabraFormateada, minus;
+        minus = palabra.replaceAll("\\s+", "").toLowerCase();
+        palabraFormateada = minus.replaceAll(",", "");
+        palabraFormateada = minus.replaceAll("á", "a");
+        palabraFormateada = minus.replaceAll("é", "e");
+        palabraFormateada = minus.replaceAll("í", "i");
+        palabraFormateada = minus.replaceAll("ó", "o");
+        palabraFormateada = minus.replaceAll("ú", "u");
         
         for (int i = 0; i < palabraFormateada.length() / 2; i++) {
             if (palabraFormateada.charAt(i) != palabraFormateada.charAt(palabraFormateada.length() - i - 1)) {
@@ -19,6 +26,7 @@ public class GestorPalabras {
         }
         return true;
     }
+
 
     public int contarVocales(String palabra) {
         int contador = 0;
